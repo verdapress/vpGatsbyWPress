@@ -11,9 +11,9 @@ const Post = (props) =>(
     />
   <Card.Body>
     <Card.Title>{props.title}</Card.Title>
-    <Card.Text>
-      {props.excerpt}
-    </Card.Text>
+    <Card.Text dangerouslySetInnerHTML={{ __html: props.excerpt }}/>
+      {/* {props.excerpt} */}
+    {/* </Card.Text> */}
     <Button variant="primary">{props.title}</Button>
   </Card.Body>
 </Card>
