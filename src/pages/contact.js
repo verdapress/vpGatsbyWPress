@@ -5,9 +5,9 @@ import Footer from "../components/Footer";
 
 const Contact = () => (
   <Layout>
-    <h1>Contact US</h1>
+    <h1>Contact Us</h1>
     <p>
-      <Link to="/page-2/">Go to Post Page</Link> <br />
+    <Link to="/page-wpress/">Go to WP Post Page</Link> <br />
     </p>
     <Footer></Footer>
   </Layout>
