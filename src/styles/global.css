@@ -1,0 +1,6 @@
+html {
+    background-color: rgb(206, 114, 114);
+}
+.card-body {
+    margin-bottom: 20px !important;
+}
