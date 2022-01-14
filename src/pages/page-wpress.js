@@ -8,13 +8,13 @@ export default ({ data }) => {
   console.log(data)
   return (
     <Layout>
-    <h1>Welcome to the  VerdaPress Blog Page.</h1>
+    <h1>Welcome to the  VerdaPress WP Blog Page.</h1>
     <p>Built with WordPress [vp].</p>
     <p>
     <div>
-      {data.allMarkdownRemark.nodes.map(node => (
+      {data.allWpPost.nodes.map(node => (
         <Post
-          title={node.frontmatter.title}
+          title={node.title}
           excerpt={node.excerpt}
         />
       ))}
@@ -31,16 +31,15 @@ export default ({ data }) => {
 export const query = graphql ` 
 {
 
-  allMarkdownRemark {
-  
-  nodes{
-  
-  frontmatter {
-  
-  title
-  date
-  keywords}
-  excerpt
-  html}}
+  allWpPost {
+    nodes {
+      id
+      title
+      excerpt
+      slug
+      date(formatString: "MMMM DD, YYYY")
+    }
+  }
+
   }
 `
